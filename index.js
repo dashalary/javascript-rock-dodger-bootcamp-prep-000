@@ -140,7 +140,7 @@ function moveDodger(e) {
 // }
 
 function moveDodgerLeft() {
-  dodger.style.left = `${left += 4}px`
+  DODGER.style.left = `${left += 4}px`
  if (dodgerLeftEdge < 1) {window.requestAnimationFrame(moveDodger)}
 }
   /**
@@ -151,10 +151,9 @@ function moveDodgerLeft() {
 
 function moveDodgerRight() {
   window.requestAnimationFrame(function (){
-    
+    var right = positionToInteger(DODGER.style.right)
+    if (right < 400) { DODGER.style.right = `${right += 4}px`}
   })
-  dodger.style.right = `${right += 4}px`
-   if (dodgerRightEdge < 400) {window.requestAnimationFrame(moveDodger)}
 }
   // implement me!
   /**
