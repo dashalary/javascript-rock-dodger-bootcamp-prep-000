@@ -116,7 +116,6 @@ if (checkCollision(rock) === true) {
 function endGame() {
   clearInterval(gameInterval);
   ROCKS.forEach(element => element.remove());
-// for (let i = 0; ROCKS.length < i; i++) {ROCKS[i].remove()}
  window.removeEventListener('keydown', moveDodger)
  alert("YOU LOSE!");
 }
